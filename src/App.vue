@@ -14,11 +14,9 @@ const thing = "hi dude";
 </script>
 
 <template>
-  <Layout />
+  <div class="site-wrapper">
+    <Layout />
+  </div>
 </template>
 
-<style>
-#app {
-  height: auto;
-}
-</style>
+<style></style>

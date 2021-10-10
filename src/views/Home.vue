@@ -1,13 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const staticVariable = "I am staticus";
+const count = ref(0);
+
+function changeCount(isIncrement: boolean) {
+  isIncrement ? count.value++ : count.value--;
+}
+</script>
 
 <template>
   <div class="home">
-    <h1 class="title">I am home</h1>
+    <p>I am home</p>
+    <p>staticVariable: {{ staticVariable }}</p>
+    <p>The count is: {{ count }}</p>
+    <button @click="changeCount(true)">Increment</button>
+    <button @click="changeCount(false)">Decrement</button>
   </div>
 </template>
 <style>
 .home {
-  @apply flex;
+  @apply flex flex-col justify-center items-center flex-grow;
 }
 .title {
 }

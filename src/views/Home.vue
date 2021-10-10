@@ -10,6 +10,5 @@
   @apply flex;
 }
 .title {
-  @apply text-2xl;
 }
 </style>
